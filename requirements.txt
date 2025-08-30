@@ -1,5 +1,29 @@
-flask
-transformers
-torch
-nltk
-pdfplumber
+# -------------------------
+# Framework web
+# -------------------------
+Flask==2.3.4
+
+# -------------------------
+# Inteligência Artificial / NLP
+# -------------------------
+transformers==4.35.0
+torch==2.2.0
+nltk==3.8.1
+
+# -------------------------
+# Trabalhar com PDFs
+# -------------------------
+pdfplumber==0.10.6
+PyPDF2==3.0.1
+
+# -------------------------
+# Utilidades gerais
+# -------------------------
+# pandas==2.1.1       # Para manipulação de dados, se necessário
+# numpy==1.26.0       # Para cálculos e matrizes, se necessário
+
+# -------------------------
+# Observações
+# -------------------------
+# Instale todas as dependências usando:
+# pip install -r requirements.txt

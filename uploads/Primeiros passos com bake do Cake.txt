@@ -1,0 +1,193 @@
+***********************************************Como criar um CRUD com bake do    CakePHP******************************************************
+
+ bin/cake bake all categorias produtos
+
+o comando acima cria um mvc completo da tabela 'categorias_produtos' e existe uma tabela associada a essa tabela
+
+ bin/cake bake all produtos
+
+também cria um mvc para essa tabela, mas pode dar um erro na hora do cadastro de categorias. Então eis o raciocínio: 
+
+Um produto pertence a uma categoria
+
+Uma categoria tem muitos produtos
+
+Como uma categoria tem muitos produtos, coloque isso no CategoriasProdutosController: 
+
+public function initialize(): void
+{
+    parent::initialize();
+
+    $this->loadModel('CategoriasProdutos'); // <-- Isso aqui
+}
+
+e o erro sumirá e o crud de ambas tabelas funcionará perfeitamente.
+
+|**************************************Listando dados do banco de dados *********************************************|
+
+O conceito de criar um listar e exibi os dados farei em partes
+
+Use o comando bin/cake bake model Nome da tabela que quer criar uma model
+
+vai criar a model da tabela pedida
+
+Depois crie uma entite para a tabela que quer: ex Users.php
+
+Código da entity----
+
+<?php
+
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+
+class Users extends Entity
+{
+    public $_accessible = [
+        'id' => true,
+        'nome' => true,
+        'email' => true,
+        'created' => true,
+        'modified' => true,
+    ];
+}
+?>
+
+Depois crie a controller: ex UsersController.php
+
+<?php
+
+namespace App\Controller;
+
+use App\Controller\AppController;
+
+class UsersController extends AppController
+{
+    public function index(){
+       // $usuario = "Pedro";
+        //$this->set(['usuarios' => $usuario]);
+
+        $usuarios = $this->Users->find()->all(); // Use 'Users' aqui, e não 'User'
+        //$this->set(['usuarios' => $usuarios]);
+        $this->set(compact('usuarios'));
+    }
+}
+
+?>
+
+Em seguida precisara de um template para uma view, crie uma pasta do nome referente a tabela do banco de dados. Ex Users
+Depois a view de nome index
+
+<?php
+
+//var_dump($usuarios)
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+   <table>
+   	<thead>
+   		<tr>
+   			<th>ID</th>
+   			<th>Nome</th>
+   			<th>Email</th>
+   			<th>Ações</th>
+   		</tr>
+   	</thead>
+   	<tbody>
+   		<?php foreach($usuarios as $usuario): ?>
+   		<tr>
+   			<th><?php echo $usuario->id; ?> </th>
+   			<th><?php echo $usuario->nome; ?></th>
+   			<th><?php echo $usuario->email; ?></th>
+   			<th>Editar Visualizar  Apagar</th>
+   		</tr>
+   	<?php endforeach?>
+   	</tbody>
+   </table>
+</body>
+</html>
+
+*****************************************************Paginação*********************************************************
+
+Comente essa linha do controler users
+
+$usuarios = $this->Users->find()->all();
+
+e adicione essa linha 
+
+$this->paginate = [
+            'limit' => 3,
+            'order' => [
+            	'Users.id' => 'asc',
+            ]
+        ];
+
+        $usuarios = $this->paginate($this->Users);
+
+A linha acima terá o limite de 3 registros e ordenado pelo id do usuário de ordem crescenter
+
+Depois coloque esse trecho de código no index
+
+<div class="paginator">
+   	  <ul class="pagination">
+   	  	<?php echo $this->Paginator->first('<<' . __("Primeira")); ?> //retorna para a primeira posição
+   	  	<?php echo $this->Paginator->prev('<' . __("Anterior")); ?>  // retorna para a posição anterior
+   	  	<?php echo $this->Paginator->numbers(); ?> // retorna os números para clicar
+   	  	<?php echo $this->Paginator->next('>' . __("Proximo")); ?> // avança a posição posterior
+        <?php echo $this->Paginator->last('>>' . __("Ultima")); ?> avança para a ultima posição
+   	  </ul> 
+
+Coloque isso no cabeçalho:
+
+scope="col"><?php echo $this->Paginator->sort('id') ?>
+
+Ao clicar, vai exibir o dado com a tabela correspondente de acordo com a tabela do banco de dados
+
+***********************************Criando formulário e enviando os dados para o bd************************************
+
+Crie esse método na controller users
+
+use esse trecho de código na index de usuários para ir no formulário
+
+<?php
+   echo $this->Html->link('Cadastrar Usuario', ['controller' => 'Users', 'action' => 'add']);
+
+   ?>
+
+public function add(){
+
+    	$user = $this->Users->newEntity([]);
+    	if($this->request->is("post")){
+    		$user = $this->Users->patchEntity($user, $this->request->getData());
+    		if($this->Users->save($user)){
+    			$this->Flash->success(__('Usuario cadastrado com sucesso'));
+    			return $this->redirect(['action' => 'index']);
+    		}else{
+    			$this->Flash->error(__('Usuario não cadastrado com sucesso'));
+    		}
+    	}
+
+    	$this->set(compact('user'));
+    }
+
+Lembre-se de ter criado a table da tabela pedida
+
+Logo em seguida, crie uma view em templates com o mesmo nome do método (ex: add.php) e coloque isso na view
+
+<h1>Cadastro de Usuarios</h1>
+<?php 
+echo $this->Form->create($user);
+echo $this->Form->control('nome');
+echo $this->Form->control('email');
+echo $this->Form->button('cadastrar');
+echo $this->Form->end();
+
+ ?>
+
+Acesse pela url e teste
+

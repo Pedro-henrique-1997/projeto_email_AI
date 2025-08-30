@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificador de Emails</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Classificação de Emails com IA</h1>
+
+    <form id="emailForm" method="POST" enctype="multipart/form-data">
+      <label for="emailText">Cole o conteúdo do email:</label><br>
+      <textarea id="emailText" name="emailText" rows="8" cols="60" placeholder="Digite ou cole aqui..."></textarea><br><br>
+
+      <label for="emailFile">Ou envie um arquivo (.txt ou .pdf):</label><br>
+      <input type="file" id="emailFile" name="emailFile" accept=".txt,.pdf"><br><br>
+
+      <button type="submit">Classificar Email</button>
+    </form>
+
+    <hr>
+
+    <div id="result">
+      {% if category %}
+        <h2>Resultado</h2>
+        <p><strong>Categoria:</strong> {{ category }}</p>
+        <p><strong>Resposta sugerida:</strong> {{ response }}</p>
+        {% if extracted_text %}
+        <hr>
+        <h3>Texto extraído do arquivo:</h3>
+        <pre>{{ extracted_text }}</pre>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

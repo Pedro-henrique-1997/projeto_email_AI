@@ -1,0 +1,133 @@
+Resumo das Qualificações
+
+Formação em Análise e Desenvolvimento de Sistemas, com experiência prática em desenvolvimento web usando PHP, Laravel, JavaScript e React.
+
+Conhecimento avançado em PHP e intermediário em Java, C++ e MySQL.
+
+Experiência em suporte técnico e atendimento ao cliente, com foco em resolução de problemas e treinamento de usuários.
+
+Prática em metodologias ágeis, participando de reuniões SCRUM e trabalhos em equipe.
+
+Inglês intermediário, com capacidade para entender documentação técnica e comunicação profissional.
+
+Habilidade em modelagem de aplicativos e análise de projetos para criação de soluções customizadas.
+
+Participação em hackathons e eventos acadêmicos, demonstrando proatividade e interesse contínuo por inovação tecnológica.
+
+
+
+
+
+
+
+
+Estagiário de TI – Fundação Oswaldo Cruz (Fiocruz) | Set/2019 – Set/2020
+
+Desenvolvi APIs e sistemas internos utilizando PHP e Laravel, contribuindo para a melhoria dos processos tecnológicos da instituição.
+
+Realizei suporte técnico na atualização e manutenção do portal e dos sistemas corporativos da Fiocruz.
+
+Organizei processos de TI, garantindo a correta inserção e atualização dos dados nos sistemas.
+
+Prestei orientação e suporte focado na experiência do usuário, facilitando o uso das ferramentas tecnológicas disponíveis.
+
+Fui responsável pela exportação e importação de processos BPM, contribuindo para a otimização dos fluxos internos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Analista de Suporte – Cognitiva Tecnologia e Informação | Ago/2022 – Fev/2024
+
+Atendi e resolvi solicitações de clientes por e-mail, telefone e chat, garantindo satisfação e solução rápida dos problemas.
+
+Desenvolvi projetos personalizados sob demanda para clientes, colaborando na entrega de soluções eficazes.
+
+Participei ativamente das reuniões semanais via metodologia SCRUM, atualizando o status dos chamados e planejando próximas atividades.
+
+Facilitei treinamentos sobre novos produtos para clientes, promovendo o entendimento e uso correto das ferramentas.
+
+Auxiliei na construção e gerenciamento do backup de chamados internos, garantindo organização e segurança das informações.
+
+Ofereci suporte contínuo aos usuários, solucionando dúvidas e problemas técnicos relacionados aos sistemas utilizados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fundação Oswaldo Cruz – Fiocruz
+
+Cargo: Estagiário de TI | Período: Set/2019 – Set/2020
+
+Atividades desempenhadas:
+
+Desenvolvimento de APIs e sistemas internos utilizando PHP e Laravel.
+
+Suporte técnico na atualização e manutenção do portal institucional e sistemas corporativos.
+
+Organização de processos de TI e inserção de dados no sistema.
+
+Orientação e suporte para melhorar a experiência do usuário.
+
+Exportação e importação de processos BPM.
+
+Auxílio na programação de novas funcionalidades e melhorias para os sistemas utilizados pela instituição.
+
+Cognitiva Tecnologia e Informação
+
+
+
+
+Cargo: Analista de Suporte | Período: Ago/2022 – Fev/2024
+
+Atividades desempenhadas:
+
+Atendimento e resolução de solicitações de clientes por e-mail, telefone e chat.
+
+Desenvolvimento de projetos personalizados sob demanda para clientes.
+
+Participação em reuniões semanais utilizando a metodologia SCRUM, reportando status dos chamados e planejando próximas ações.
+
+Facilitação de treinamentos sobre novos produtos para clientes.
+
+Construção e gerenciamento do backup de chamados internos, garantindo organização e segurança das informações.
+
+Suporte técnico contínuo a usuários, solucionando dúvidas e problemas relacionados a sistemas e ferramentas da empresa.
+
+
+
+
+
+
+
+Carta de Apresentação
+
+
+Meu nome é Pedro Henrique Carneiro Gomes da Silva e estou me candidatando à vaga de [nome da vaga] divulgada recentemente.
+
+Sou uma pessoa comprometida, dedicada e com grande interesse em desenvolver minha trajetória profissional. Apesar de estar em busca do meu primeiro emprego formal, já desenvolvi habilidades importantes como organização, disciplina, comunicação clara e facilidade de aprendizado, que acredito serem fundamentais para contribuir positivamente na rotina da empresa.
+
+Estou especialmente motivado(a) para iniciar minha carreira no setor [mencionar o setor da vaga – ex.: administrativo, atendimento, logística], onde posso colocar em prática minha capacidade de colaborar em equipe, aprender rapidamente processos e buscar sempre os melhores resultados. Tenho disponibilidade imediata e disposição para me adaptar às demandas e desafios do cargo.
+
+Acredito que a oportunidade de integrar a equipe da [nome da empresa] será valiosa para o meu crescimento profissional e, ao mesmo tempo, me permitirá contribuir com dedicação, responsabilidade e energia para os objetivos da empresa.
+
+Agradeço desde já a atenção e coloco-me à disposição para uma entrevista, onde poderei detalhar melhor meu perfil e meu entusiasmo em fazer parte da equipe.
+
+Atenciosamente,
+Pedro Henrique Carneiro Gomes da Silva
